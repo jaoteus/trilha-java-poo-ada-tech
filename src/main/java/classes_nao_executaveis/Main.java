@@ -19,7 +19,13 @@ public class Main {
         cachorro1.tamanhoDoRabo = 5;
         cachorro1.peso = 5.7;
 
-        System.out.println(cachorro1); // irá mostra o endereço do objeto na memória da JVM
+        // System.out.println(cachorro1); // irá mostra o endereço do objeto na memória da JVM
 
+        cachorro1.latir();// imprimi AU AU
+
+        System.out.println(cachorro1.pegar());
+
+        // interagindo com o cachorro
+        System.out.println("O cachorro está " + cachorro1.interagir("chute"));
     }
 }
