@@ -2,31 +2,30 @@ package classes_nao_executaveis;
 
 import classes_nao_executaveis.Animais.Cachorro;
 import classes_nao_executaveis.Animais.Gato;
+import classes_nao_executaveis.Animais.Passaro;
 
 public class Main {
     // uma classe descreve como um objeto vai ser
 
     public static void main(String[] args) {
+        Gato gato1 = new Gato("puppy", "Marrom", 10, 1.7);
+        Cachorro cachorro1 = new Cachorro("puppy", "Marrom", 10, 1.7, 5);
+        Passaro passaro1 = new Passaro("nino", "amarelo", 5, 0.3);
 
-        // criando um objeto
+        gato1.soar();
+        cachorro1.soar();
+        passaro1.soar();
 
-        Cachorro cachorro1 =
-                new Cachorro(); // padrão
+        System.out.println("--------------------------");
 
-        Cachorro cachorro2 =
-                new Cachorro("Puppy", "Marrom", 25, 5.7, 5);
+        gato1.comer();
+        cachorro1.comer();
+        passaro1.comer();
 
-        Cachorro cachorro3 =
-                new Cachorro("Rex", "Marrom", 25, 5.7, 5);
+        System.out.println("--------------------------");
 
-        System.out.println(cachorro1.getNumerosCachorros());
-
-        // pode ver que eles possuem endereço de memoria diferentes, mesmo que tenha os mesmos atributos:
-        System.out.println(cachorro2.toString());
-        System.out.println(cachorro3.toString());
-
-        System.out.println("-------------------");
-        System.out.println(cachorro2.toString());
-        System.out.println(cachorro3.toString());
+        gato1.dormir();
+        cachorro1.dormir();
+        passaro1.dormir();
     }
 }

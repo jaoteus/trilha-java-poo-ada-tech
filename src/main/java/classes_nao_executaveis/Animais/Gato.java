@@ -1,28 +1,24 @@
 package classes_nao_executaveis.Animais;
 
-public class Gato {
-    public String cor;
-    public String nome;
-    public double tamanho;
-    public int idade;
 
-    public void miar(){
-        System.out.println("miau miau");
+public class Gato extends Animal{
+
+    public Gato(String nome, String cor, int altura, double peso){
+        super(nome, cor, altura, peso);
     }
 
-    public String pegarRato(int quantidadeDeRato){
-        String string;
-        if (quantidadeDeRato == 1){
-            string = "Pegou " + quantidadeDeRato + " rato";
-        } else if (quantidadeDeRato == 0){
-            string = "Pegou nenhum rato";
-        } else {
-            string = "Pegou " + quantidadeDeRato + " ratos";
-        }
-        return string;
+    @Override
+    public void soar(){
+        System.out.println("MIAU MIAU");
     }
 
-    public void pularNoTelhado(){
-        System.out.println("O gato está pulando no telhado");
+    @Override
+    public void comer(){
+        System.out.println("gato comendo");
+    }
+
+    @Override
+    public void dormir(){
+        System.out.println("gato dormindo");
     }
 }
