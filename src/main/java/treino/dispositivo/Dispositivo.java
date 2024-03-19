@@ -1,12 +1,13 @@
 package treino.dispositivo;
 
-public class Dispositivo {
+public abstract class Dispositivo {
     protected String marca;
     protected String modelo;
     protected int anoLancamento;
     protected double preco;
     protected int estoque;
     protected static int quantidadeDeDispositivos;
+    protected static int quantidadeDeDispositivosVendidos;
 
     public Dispositivo(String marca, String modelo, int anoLancamento, double preco, int estoque) {
         this.marca = marca;
@@ -56,5 +57,13 @@ public class Dispositivo {
 
     public void setEstoque(int estoque) {
         this.estoque = estoque;
+    }
+
+    public static void setQuantidadeDeDispositivosVendidos() {
+        Dispositivo.quantidadeDeDispositivosVendidos ++;
+    }
+
+    public static int getQuantidadeDeDispositivosVendidos() {
+        return quantidadeDeDispositivosVendidos;
     }
 }

@@ -25,7 +25,7 @@ public class PenDrive extends Dispositivo {
         System.out.println("Se você não pode ligar, também não pode desligar um pen drive bro!");
     }
 
-    public String getCapacidadeDeArmazenamento() {
-        return capacidadeDeArmazenamento + "gb";
+    public int getCapacidadeDeArmazenamento() {
+        return capacidadeDeArmazenamento;
     }
 }
